@@ -2,9 +2,6 @@ backend:
   name: github
   repo: seeds-hotpack/team-blog.github.io
   branch: main
-  site_id: gentle-dango-9ff89a
-  base_url: https://api.netlify.com
-  auth_endpoint: auth
 
 # 미디어 파일 저장 위치
 media_folder: "static/images/uploads"
