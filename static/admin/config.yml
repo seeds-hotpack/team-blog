@@ -10,8 +10,8 @@ media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
 # 편집기 미리보기 설정
-site_url: https://\[조직명\].github.io/\[저장소명\]
-display_url: https://\[조직명\].github.io/\[저장소명\]
+site_url: https://seeds-hotpack.github.io/team-blog/
+display_url: https://seeds-hotpack.github.io/team-blog/
 
 # 콘텐츠 컬렉션 설정
 collections:
