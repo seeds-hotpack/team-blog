@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: seeds-hotpack/team-blog
+  name: git-gateway
   branch: main
 
 # 미디어 파일 저장 위치
