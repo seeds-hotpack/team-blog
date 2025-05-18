@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: [조직명]/[저장소명]
+  repo: seeds-hotpack/team-blog.github.io
   branch: main
   base_url: https://api.netlify.com
   auth_endpoint: auth
