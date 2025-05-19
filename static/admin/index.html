@@ -1,25 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Content Manager</title>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Manager</title>
+  <!-- Netlify Identity Widget -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-<script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-<script>
-  window.CMS.registerEventListener({
-    name: 'preSave',
-    handler: ({ entry, author }) => {
-      const currentUser = window.CMS?.auth?.getCurrentUser?.();
-      if (currentUser) {
-        const userName = currentUser.name || currentUser.email;
-        return entry.get('data').set('author', userName);
+  <!-- Decap CMS -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <!-- Pre-save hook: set author and date -->
+  <script>
+    window.CMS.registerEventListener({
+      name: 'preSave',
+      handler: ({ entry }) => {
+        let updatedEntry = entry;
+        // Set author to current user
+        const currentUser = window.CMS?.auth?.getCurrentUser?.();
+        if (currentUser) {
+          const userName = currentUser.name || currentUser.email;
+          updatedEntry = updatedEntry.setIn(['data', 'author'], userName);
+        }
+        // Set date to local (KST) time
+        const now = new Date();
+        const tzOffset = now.getTimezoneOffset() * 60000;
+        const localISOTime = new Date(now - tzOffset).toISOString().slice(0, 16);
+        updatedEntry = updatedEntry.setIn(['data', 'date'], localISOTime);
+        return updatedEntry;
       }
-      return entry;
-    },
-  });
-</script>
+    });
+  </script>
+  <!-- Post-save hook: redirect to home -->
+  <script>
+    window.CMS.registerEventListener({
+      name: 'postSave',
+      handler: () => {
+        // slight delay to allow save to complete
+        setTimeout(() => {
+          window.location.href = '/';
+        }, 500);
+      }
+    });
+  </script>
 </body>
 </html>
