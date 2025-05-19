@@ -4,7 +4,7 @@ description: 스프링 알아보자
 date: 2025-05-19T18:16:00.000Z
 image: 전자서명.png
 categories:
-  - 스프링스터디
+  - 스프링-스터디
 tags:
   - 스프링
   - 태그
