@@ -7,12 +7,28 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Mon, 19 May 2025 21:42:34 +0900</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>ㅁㄴㅇㄹ</title>
-        <link>http://localhost:1313/tags/%E3%85%81%E3%84%B4%E3%85%87%E3%84%B9/</link>
-        <pubDate>Mon, 19 May 2025 21:42:34 +0900</pubDate>
+        <lastBuildDate>Mon, 19 May 2025 23:47:27 +0900</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>김영한</title>
+        <link>http://localhost:1313/tags/%EA%B9%80%EC%98%81%ED%95%9C/</link>
+        <pubDate>Mon, 19 May 2025 23:47:27 +0900</pubDate>
         
-        <guid>http://localhost:1313/tags/%E3%85%81%E3%84%B4%E3%85%87%E3%84%B9/</guid>
+        <guid>http://localhost:1313/tags/%EA%B9%80%EC%98%81%ED%95%9C/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>스프링</title>
+        <link>http://localhost:1313/tags/%EC%8A%A4%ED%94%84%EB%A7%81/</link>
+        <pubDate>Mon, 19 May 2025 23:47:27 +0900</pubDate>
+        
+        <guid>http://localhost:1313/tags/%EC%8A%A4%ED%94%84%EB%A7%81/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>스프링부트</title>
+        <link>http://localhost:1313/tags/%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8/</link>
+        <pubDate>Mon, 19 May 2025 23:47:27 +0900</pubDate>
+        
+        <guid>http://localhost:1313/tags/%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8/</guid>
         <description></description>
         </item>
         
