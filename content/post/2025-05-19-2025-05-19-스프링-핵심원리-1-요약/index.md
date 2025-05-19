@@ -6,9 +6,9 @@ image: 전자서명.png
 categories:
   - 스터디
 tags:
-  - 스프링
-  - 태그
-  - 태그2
+  - spring
+  - study
+  - test
 draft: false
 ---
 ㄴㅁㅇㄹㅁㄴㅇㄹ
