@@ -3,19 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2025-05-19T21:42:34+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/</loc>
+    <lastmod>2025-05-19T21:42:34+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-05-19T21:42:34+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/%E3%85%81%E3%84%B4%E3%85%87%E3%84%B9/</loc>
+    <lastmod>2025-05-19T21:42:34+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/p/%E3%85%81%E3%84%B4%E3%85%87%E3%84%B9/</loc>
+    <lastmod>2025-05-19T21:42:34+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E3%85%81%E3%84%B4%E3%85%87%E3%84%B9/</loc>
-  </url><url>
-    <loc>http://localhost:1313/categories/spring-study/</loc>
+    <lastmod>2025-05-19T21:42:34+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
+    <lastmod>2025-05-19T21:42:34+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/spring-study/</loc>
   </url>
 </urlset>
