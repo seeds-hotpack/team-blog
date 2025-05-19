@@ -6,15 +6,6 @@
         <description>Recent content in Categories on 핫팩 팀 블로그</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
-        <copyright>Example Person</copyright>
-        <lastBuildDate>Mon, 19 May 2025 00:51:00 +0000</lastBuildDate><atom:link href="https://gentle-dango-9ff89a.netlify.app/categories/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Asdf</title>
-        <link>https://gentle-dango-9ff89a.netlify.app/categories/asdf/</link>
-        <pubDate>Mon, 19 May 2025 00:51:00 +0000</pubDate>
-        
-        <guid>https://gentle-dango-9ff89a.netlify.app/categories/asdf/</guid>
-        <description></description>
-        </item>
-        
+        <copyright>Example Person</copyright><atom:link href="https://gentle-dango-9ff89a.netlify.app/categories/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>

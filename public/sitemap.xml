@@ -2,25 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://gentle-dango-9ff89a.netlify.app/p/asdf/</loc>
-    <lastmod>2025-05-19T00:51:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gentle-dango-9ff89a.netlify.app/categories/asdf/</loc>
-    <lastmod>2025-05-19T00:51:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gentle-dango-9ff89a.netlify.app/categories/</loc>
-    <lastmod>2025-05-19T00:51:00+00:00</lastmod>
-  </url><url>
     <loc>https://gentle-dango-9ff89a.netlify.app/post/</loc>
-    <lastmod>2025-05-19T00:51:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gentle-dango-9ff89a.netlify.app/tags/sadf/</loc>
-    <lastmod>2025-05-19T00:51:00+00:00</lastmod>
-  </url><url>
-    <loc>https://gentle-dango-9ff89a.netlify.app/tags/</loc>
-    <lastmod>2025-05-19T00:51:00+00:00</lastmod>
+    <lastmod>2025-05-19T18:16:00+00:00</lastmod>
   </url><url>
     <loc>https://gentle-dango-9ff89a.netlify.app/</loc>
-    <lastmod>2025-05-19T00:51:00+00:00</lastmod>
+    <lastmod>2025-05-19T18:16:00+00:00</lastmod>
+  </url><url>
+    <loc>https://gentle-dango-9ff89a.netlify.app/categories/</loc>
+  </url><url>
+    <loc>https://gentle-dango-9ff89a.netlify.app/tags/</loc>
   </url>
 </urlset>
