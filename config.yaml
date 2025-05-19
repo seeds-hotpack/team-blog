@@ -196,7 +196,11 @@ params:
 ### See https://stack.jimmycai.com/config/menu
 ### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
 menu:
-    main: []
+    main:
+      - identifier: admin
+        name: 글쓰기
+        url: /admin/
+        weight: 100
 
     social:
         - identifier: github
@@ -204,12 +208,6 @@ menu:
           url: https://github.com/CaiJimmy/hugo-theme-stack
           params:
               icon: brand-github
-
-        - identifier: twitter
-          name: Twitter
-          url: https://twitter.com
-          params:
-              icon: brand-twitter
 
 related:
     includeNewer: true
