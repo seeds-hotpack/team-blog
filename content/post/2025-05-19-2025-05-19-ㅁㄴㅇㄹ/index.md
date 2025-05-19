@@ -1,8 +1,8 @@
 ---
 title: ㅁㄴㅇㄹ
 description: ㅁㄴㅇㄹ
-date: 2025-05-19T21:36:00+09:00
-author: ㅁㄴㄹㅇ
+date: 2025-05-19T21:42:34+09:00
+author: ""
 categories:
   - ㅁㄴㅇㄹ
 tags:
