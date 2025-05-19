@@ -1,8 +1,8 @@
 ---
 title: 스프링 빈 동작원리
 description: 스프링빈의 동작 원리는 어떻게 될까
-date: 2025-05-20T00:04:15+09:00
-author: ""
+date: 2025-05-20T00:05:02+09:00
+author: 박준하
 categories:
   - spring-study
 tags:
