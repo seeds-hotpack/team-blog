@@ -10,7 +10,7 @@
 <body>
   <!-- Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  <!-- Pre-save hook: set author and date -->
+  <!-- Combined Pre-save hook: set author and KST date -->
   <script>
     window.CMS.registerEventListener({
       name: 'preSave',
@@ -22,21 +22,25 @@
           const userName = currentUser.name || currentUser.email;
           updatedEntry = updatedEntry.setIn(['data', 'author'], userName);
         }
-        // Set date to local (KST) time
+        // Set date to local (KST) time in full ISO format
         const now = new Date();
-        const tzOffset = now.getTimezoneOffset() * 60000;
-        const localISOTime = new Date(now - tzOffset).toISOString().slice(0, 16);
-        updatedEntry = updatedEntry.setIn(['data', 'date'], localISOTime);
+        const pad = n => String(n).padStart(2, '0');
+        const YYYY = now.getFullYear();
+        const MM = pad(now.getMonth() + 1);
+        const DD = pad(now.getDate());
+        const hh = pad(now.getHours());
+        const mm = pad(now.getMinutes());
+        const ss = pad(now.getSeconds());
+        // Construct ISO string with +09:00 offset
+        const kst = `${YYYY}-${MM}-${DD}T${hh}:${mm}:${ss}+09:00`;
+        updatedEntry = updatedEntry.setIn(['data', 'date'], kst);
         return updatedEntry;
       }
     });
-  </script>
-  <!-- Post-save hook: redirect to home -->
-  <script>
+    <!-- Post-save hook: redirect to home -->
     window.CMS.registerEventListener({
       name: 'postSave',
       handler: () => {
-        // slight delay to allow save to complete
         setTimeout(() => {
           window.location.href = '/';
         }, 500);
