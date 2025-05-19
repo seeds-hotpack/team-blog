@@ -1,7 +1,7 @@
 ---
 title: CICD
 description: 소프트웨어 개발과 배포를 자동화하여 효율성과 안정성을 높이기 위한 일련의 프로세스
-date: 2025-05-19T23:22:01+09:00
+date: 2025-05-19T23:23:02+09:00
 author: ""
 categories:
   - CICD
