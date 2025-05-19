@@ -1,4 +1,4 @@
-baseurl: https://seeds-hotpack.github.io/team-blog/
+baseurl: https://gentle-dango-9ff89a.netlify.app/
 languageCode: en-us
 theme: hugo-theme-stack
 title: Example Site
@@ -14,7 +14,7 @@ hasCJKLanguage: false
 
 languages:
     ko:
-        languageName: 한글
+        languageName: 한국어
         title: 핫팩 팀 블로그
         weight: 1
         params:
