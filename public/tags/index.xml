@@ -2,10 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Tags on 핫팩 팀 블로그</title>
-        <link>https://gentle-dango-9ff89a.netlify.app/tags/</link>
+        <link>http://localhost:1313/tags/</link>
         <description>Recent content in Tags on 핫팩 팀 블로그</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
-        <copyright>Example Person</copyright><atom:link href="https://gentle-dango-9ff89a.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>Example Person</copyright>
+        <lastBuildDate>Sun, 18 May 2025 19:20:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>안녕</title>
+        <link>http://localhost:1313/tags/%EC%95%88%EB%85%95/</link>
+        <pubDate>Sun, 18 May 2025 19:20:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/tags/%EC%95%88%EB%85%95/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>헬로</title>
+        <link>http://localhost:1313/tags/%ED%97%AC%EB%A1%9C/</link>
+        <pubDate>Sun, 18 May 2025 19:20:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/tags/%ED%97%AC%EB%A1%9C/</guid>
+        <description></description>
+        </item>
+        
     </channel>
 </rss>
