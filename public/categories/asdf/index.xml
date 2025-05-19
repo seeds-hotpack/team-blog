@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>팀 블로그 on 핫팩 팀 블로그</title>
-        <link>https://gentle-dango-9ff89a.netlify.app/</link>
-        <description>Recent content in 팀 블로그 on 핫팩 팀 블로그</description>
+        <title>Asdf on 핫팩 팀 블로그</title>
+        <link>https://gentle-dango-9ff89a.netlify.app/categories/asdf/</link>
+        <description>Recent content in Asdf on 핫팩 팀 블로그</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Mon, 19 May 2025 00:51:00 +0000</lastBuildDate><atom:link href="https://gentle-dango-9ff89a.netlify.app/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 19 May 2025 00:51:00 +0000</lastBuildDate><atom:link href="https://gentle-dango-9ff89a.netlify.app/categories/asdf/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>asdf</title>
         <link>https://gentle-dango-9ff89a.netlify.app/p/asdf/</link>
         <pubDate>Mon, 19 May 2025 00:51:00 +0000</pubDate>
