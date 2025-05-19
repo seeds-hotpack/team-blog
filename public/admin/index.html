@@ -4,9 +4,48 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager</title>
+  <!-- Netlify Identity Widget -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
+  <!-- Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <!-- Combined Pre-save hook: set author and KST date -->
+  <script>
+    window.CMS.registerEventListener({
+      name: 'preSave',
+      handler: ({ entry }) => {
+        let updatedEntry = entry;
+        // Set author to current user
+        const currentUser = window.CMS?.auth?.getCurrentUser?.();
+        if (currentUser) {
+          const userName = currentUser.name || currentUser.email;
+          updatedEntry = updatedEntry.setIn(['data', 'author'], userName);
+        }
+        // Set date to local (KST) time in full ISO format
+        const now = new Date();
+        const pad = n => String(n).padStart(2, '0');
+        const YYYY = now.getFullYear();
+        const MM = pad(now.getMonth() + 1);
+        const DD = pad(now.getDate());
+        const hh = pad(now.getHours());
+        const mm = pad(now.getMinutes());
+        const ss = pad(now.getSeconds());
+        // Construct ISO string with +09:00 offset
+        const kst = `${YYYY}-${MM}-${DD}T${hh}:${mm}:${ss}+09:00`;
+        updatedEntry = updatedEntry.setIn(['data', 'date'], kst);
+        return updatedEntry;
+      }
+    });
+    <!-- Post-save hook: redirect to home -->
+    window.CMS.registerEventListener({
+      name: 'postSave',
+      handler: () => {
+        setTimeout(() => {
+          window.location.href = '/';
+        }, 500);
+      }
+    });
+  </script>
 </body>
 </html>

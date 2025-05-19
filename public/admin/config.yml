@@ -24,6 +24,7 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string", default: "", required: false, hint: "작성자는 자동으로 입력됩니다", hidden: true }
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Categories", name: "categories", widget: "list" }
       - { label: "Tags", name: "tags", widget: "list" }
