@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Categories on Example Site</title>
-        <link>http://localhost:1313/categories/</link>
-        <description>Recent content in Categories on Example Site</description>
+        <title>Categories on 핫팩 팀 블로그</title>
+        <link>https://gentle-dango-9ff89a.netlify.app/categories/</link>
+        <description>Recent content in Categories on 핫팩 팀 블로그</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en</language>
+        <language>ko</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Thu, 18 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 18 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://gentle-dango-9ff89a.netlify.app/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>기술</title>
-        <link>http://localhost:1313/categories/%EA%B8%B0%EC%88%A0/</link>
+        <link>https://gentle-dango-9ff89a.netlify.app/categories/%EA%B8%B0%EC%88%A0/</link>
         <pubDate>Thu, 18 May 2023 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/categories/%EA%B8%B0%EC%88%A0/</guid>
+        <guid>https://gentle-dango-9ff89a.netlify.app/categories/%EA%B8%B0%EC%88%A0/</guid>
         <description></description>
         </item>
         
