@@ -16,7 +16,7 @@ collections:
     label: "Post"
     folder: "content/post"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     path: "{{year}}-{{month}}-{{day}}-{{slug}}/index"
     editor:
       preview: true
