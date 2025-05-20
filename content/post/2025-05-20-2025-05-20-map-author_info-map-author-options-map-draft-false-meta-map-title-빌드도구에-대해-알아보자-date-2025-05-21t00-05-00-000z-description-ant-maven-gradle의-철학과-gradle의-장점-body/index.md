@@ -4,10 +4,19 @@ meta:
   date: 2025-05-21T00:05:00.000Z
   description: Ant, Maven, Gradle의 철학과 Gradle의 장점
 author_info:
-  author: ""
+  author: 박준하
 options:
   draft: false
-date: 2025-05-21T00:06:43+09:00
+  image: build_tools.png
+date: 2025-05-21T00:09:49+09:00
+taxonomy:
+  categories:
+    - spring-study
+  tags:
+    - ant
+    - maven
+    - gradle
+    - 빌드도구
 ---
 ## 빌드 도구, 왜 중요할까?
 
