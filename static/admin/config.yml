@@ -20,36 +20,36 @@ collections:
     path: "{{year}}-{{month}}-{{day}}-{{slug}}/index"
     editor:
       preview: true
-fields:
-  - label: "기본 정보"
-    name: "meta"
-    widget: "object"
     fields:
-      - { label: "제목", name: "title", widget: "string", hint: "포스트의 제목을 입력하세요" }
-      - { label: "설명", name: "description", widget: "string", hint: "요약 혹은 서브타이틀을 입력하세요" }
-      - { label: "작성일", name: "date", widget: "datetime", hidden: true }
+      - label: "기본 정보"
+        name: "meta"
+        widget: "object"
+        fields:
+          - { label: "제목", name: "title", widget: "string", hint: "포스트의 제목을 입력하세요" }
+          - { label: "설명", name: "description", widget: "string", hint: "요약 혹은 서브타이틀을 입력하세요" }
+          - { label: "작성일", name: "date", widget: "datetime", hidden: true }
 
-  - label: "작성자 정보"
-    name: "author_info"
-    widget: "object"
-    fields:
-      - { label: "작성자", name: "author", widget: "string", default: "", required: false, hidden: true, hint: "자동으로 입력됩니다" }
+      - label: "작성자 정보"
+        name: "author_info"
+        widget: "object"
+        fields:
+          - { label: "작성자", name: "author", widget: "string", default: "", required: false, hidden: true, hint: "자동으로 입력됩니다" }
 
-  - label: "분류 정보"
-    name: "taxonomy"
-    widget: "object"
-    fields:
-      - { label: "카테고리", name: "categories", widget: "list", hint: "카테고리를 추가하세요 (예: 개발, 일상)" }
-      - { label: "태그", name: "tags", widget: "list", hint: "관련 키워드 태그를 추가하세요" }
+      - label: "분류 정보"
+        name: "taxonomy"
+        widget: "object"
+        fields:
+          - { label: "카테고리", name: "categories", widget: "list", hint: "카테고리를 추가하세요 (예: 개발, 일상)" }
+          - { label: "태그", name: "tags", widget: "list", hint: "관련 키워드 태그를 추가하세요" }
 
-  - label: "옵션"
-    name: "options"
-    widget: "object"
-    fields:
-      - { label: "초안 상태", name: "draft", widget: "boolean", default: false, hint: "작성 중이면 체크하세요" }
-      - { label: "대표 이미지", name: "image", widget: "image", required: false, hint: "800x400 이상 이미지 권장" }
+      - label: "옵션"
+        name: "options"
+        widget: "object"
+        fields:
+          - { label: "초안 상태", name: "draft", widget: "boolean", default: false, hint: "작성 중이면 체크하세요" }
+          - { label: "대표 이미지", name: "image", widget: "image", required: false, hint: "800x400 이상 이미지 권장" }
 
-  - { label: "본문", name: "body", widget: "markdown", hint: "본문을 마크다운 형식으로 작성하세요" }
+      - { label: "본문", name: "body", widget: "markdown", hint: "본문을 마크다운 형식으로 작성하세요" }
 
   - name: "categories"
     label: "📂 Categories"
