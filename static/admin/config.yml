@@ -7,32 +7,52 @@ media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
 # 편집기 미리보기 설정
-site_url: https://seeds-hotpack.github.io/team-blog/
-display_url: https://seeds-hotpack.github.io/team-blog/
+site_url: https://seeds-hotpack.space/
+display_url: https://seeds-hotpack.space/
 
 # 콘텐츠 컬렉션 설정
 collections:
   - name: "post"
-    label: "Post"
+    label: "📝 Posts"
     folder: "content/post"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     path: "{{year}}-{{month}}-{{day}}-{{slug}}/index"
     editor:
       preview: true
+fields:
+  - label: "기본 정보"
+    name: "meta"
+    widget: "object"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { name: "date", label: "Date", widget: "datetime", hidden: true }
-      - { label: "Author", name: "author", widget: "string", default: "", required: false, hint: "작성자는 자동으로 입력됩니다", hidden: true }
-      - { label: "Image", name: "image", widget: "image", required: false }
-      - { label: "Categories", name: "categories", widget: "list" }
-      - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Draft", name: "draft", widget: "boolean", default: false }
-      - { label: "Body", name: "body", widget: "markdown" }
-  
+      - { label: "제목", name: "title", widget: "string", hint: "포스트의 제목을 입력하세요" }
+      - { label: "설명", name: "description", widget: "string", hint: "요약 혹은 서브타이틀을 입력하세요" }
+      - { label: "작성일", name: "date", widget: "datetime", hidden: true }
+
+  - label: "작성자 정보"
+    name: "author_info"
+    widget: "object"
+    fields:
+      - { label: "작성자", name: "author", widget: "string", default: "", required: false, hidden: true, hint: "자동으로 입력됩니다" }
+
+  - label: "분류 정보"
+    name: "taxonomy"
+    widget: "object"
+    fields:
+      - { label: "카테고리", name: "categories", widget: "list", hint: "카테고리를 추가하세요 (예: 개발, 일상)" }
+      - { label: "태그", name: "tags", widget: "list", hint: "관련 키워드 태그를 추가하세요" }
+
+  - label: "옵션"
+    name: "options"
+    widget: "object"
+    fields:
+      - { label: "초안 상태", name: "draft", widget: "boolean", default: false, hint: "작성 중이면 체크하세요" }
+      - { label: "대표 이미지", name: "image", widget: "image", required: false, hint: "800x400 이상 이미지 권장" }
+
+  - { label: "본문", name: "body", widget: "markdown", hint: "본문을 마크다운 형식으로 작성하세요" }
+
   - name: "categories"
-    label: "Categories"
+    label: "📂 Categories"
     folder: "content/categories"
     create: true
     slug: "{{slug}}"
