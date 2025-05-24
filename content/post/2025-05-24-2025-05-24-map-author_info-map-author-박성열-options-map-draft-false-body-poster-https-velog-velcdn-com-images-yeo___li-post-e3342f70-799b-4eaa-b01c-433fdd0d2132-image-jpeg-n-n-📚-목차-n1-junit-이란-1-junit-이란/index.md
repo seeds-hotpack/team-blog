@@ -2,14 +2,14 @@
 meta:
   title: JUnit, 왜 그리고 어떻게 써야돼?
   description: 테스트 코드 작성 전 JUnit과 AssertJ에 대해 복습해보았습니다.
-  date: 2025-05-24T18:54:00.000Z
+  date: 2025-05-24T18:59:00.000Z
 author_info:
   author: 박성열
 taxonomy:
   categories: []
 options:
   draft: false
-date: 2025-05-24T18:58:31+09:00
+date: 2025-05-24T18:59:25+09:00
 ---
 ![poster](https://velog.velcdn.com/images/yeo___li/post/e3342f70-799b-4eaa-b01c-433fdd0d2132/image.jpeg)
 
