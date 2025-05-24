@@ -7,7 +7,7 @@ author_info:
   author: 진소희
 options:
   draft: false
-date: 2025-05-24T23:01:32+09:00
+date: 2025-05-24T23:04:19+09:00
 ---
 ### 싱글톤 패턴
 - 클래스의 인스턴스가 딱 1개만 생성되는 것을 보장하는 디자인 패턴이다.
@@ -88,3 +88,74 @@ public MemberRepository memberRepository() {
 
 - 멀티스레드 환경에서 공유된 변수를 사용할 경우 동시성 문제가 생긴다.
 - 그럴 때, 스레드마다 독립적인 값을 보관할 수 있는 ThreadLocal을 사용하면 문제 해결
+
+### 컴포넌트 스캔과 의존관계 자동 주입
+- 스프링은 설정정보가 없어도 자동으로 스프링 빈을 등록하는 컴포넌트 스캔이라는 기능을 제공한다.
+- 의존관계도 자동으로 주입하는 `@Autowired`라는 기능도 제공한다.
+- 예시
+```java
+@Component
+public class OrderServiceImpl implements OrderService {
+
+    private final MemberRepository memberRepository;
+    private final DiscountPolicy discountPolicy;
+
+    @Autowired // 생성자가 1개면 생략 가능
+    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+        this.memberRepository = memberRepository;
+        this.discountPolicy = discountPolicy;
+    }
+}
+```
+- memberRepository와 discountPolicy 빈이 자동으로 주입됨
+### 탐색 패키지 시작 위치 지정
+```java
+@Configuration
+@ComponentScan(basePackages = "hello.core.member")
+public class AutoAppConfig {
+}
+```
+- hello.core.member 패키지부터 하위만 스캔한다.
+```java
+@ComponentScan(basePackages = {"hello.core.member", "hello.core.order"})
+```
+- 여러 시작 위치를 동시에 설정 가능
+```java
+@ComponentScan(basePackageClasses = AutoAppConfig.class)
+```
+- AutoAppConfig.class가 속한 패키지를 기준으로 자동 설정
+### 컴포넌트 스캔 기본 대상
+| 애노테이션            | 설명                  | 공통점                |
+| ---------------- | ------------------- | ------------------ |
+| `@Component`     | 컴포넌트 스캔의 기본 대상      | 상위 어노테이션           |
+| `@Controller`    | 스프링 MVC 컨트롤러로 인식    | 모두 `@Component` 포함 |
+| `@Service`       | 서비스 계층 비즈니스 로직 담당   |                    |
+| `@Repository`    | DAO 계층, 데이터 접근 담당   |                    |
+| `@Configuration` | 설정 정보 클래스 (스프링 설정용) |                    |
+
+### 필터
+- FilterType 옵션
+```java
+public enum FilterType {
+    ANNOTATION,     // 기본값, 애노테이션 기준
+    ASSIGNABLE_TYPE,// 지정한 타입과 자식 타입을 인식해서 동작
+    ASPECTJ,        // AspectJ 패턴 사용
+    REGEX,          // 정규 표현식
+    CUSTOM          // 사용자 정의
+}
+```
+- 기본적으로 제공하는 스프링 부트의 기본 설정에 맞추어 사용하는것을 권장
+### 중복 등록과 충돌
+만약 수동 빈, 자동 빈 등록에서 빈 이름이 충돌된다면?
+- 수동 빈 등록 vs 자동 빈 등록
+- 수동 빈 등록이 우선권을 가진다 : 수동 빈이 자동 빈을 오버라이딩 해버린다.
+```bash
+The bean 'memoryMemberRepository', defined in class path resource [Hello/core/AutoAppConfig.class], could not be registered. A bean with that name has already been defined in file [/Users/jinsohee/Documents/dev/spring/core/out/production/classes/Hello/core/member/MemoryMemberRepository.class] and overriding is disabled.
+```
+- 최근 스프링 부트는 동일한 이름의 빈이 있으면 오류 발생 → 명시적으로 해결 요구한다.
+- application.properties
+```yml
+spring.main.allow-bean-definition-overriding=true # 이렇게 설정해두면 오버라이딩된다.
+```
+이렇게 설정해두면 오버라이딩된다.
+- 하지만 잡기 어려운 버그가 만들어질 수 있으니 안하는 것이 좋다.
